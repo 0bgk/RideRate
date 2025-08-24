@@ -1,0 +1,73 @@
+.banner {
+  width: var(--body-max-width);
+  position: relative;
+  width: var(--w-full);
+  max-width: var(--w-full);
+  height: var(--h-64);
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.imageContainer {
+  width: var(--w-full);
+  height: var(--h-full);
+  overflow: hidden;
+}
+
+.bannerImage {
+  width: var(--w-full);
+  height: var(--h-full);
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.bannerContent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: var(--w-full);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.searchForm {
+  display: flex;
+  flex-direction: column;
+  width: var(--body-max-width);
+  padding: var(--space-14) 0;
+  gap: var(--space-4);
+}
+
+.searchFormTexts {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+}
+
+.searchFormInputs {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.searchInput {
+  flex: 1;
+  padding: var(--space-2) var(--space-4);
+  border: none;
+  font-size: var(--text-base);
+}
+
+.searchButton {
+  padding: var(--space-2) var(--space-4);
+  background-color: var(--secondary-color);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.searchButton:hover {
+  background-color: var(--secondary-color-hover);
+}
