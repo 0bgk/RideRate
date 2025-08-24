@@ -14,10 +14,12 @@ html {
 
 :root {
   --primary-color: #21402E;
+  --primary-color-hover: #162b1f;
   /* dark green */
   --secondary-color: #A64C38;
   --secondary-color-hover: #8c3b2e;
-  /* warm brown */
+  /* gray */
+  --tertiary-color: #626C73;
   --black-color: #000000;
   --white-color: #FFFFFF;
   --font-heading: 'Montserrat', sans-serif;
@@ -82,7 +84,22 @@ html {
   /* 56px */
   --space-16: 4rem;
   /* 64px */
-
+  --space-20: 5rem;
+  /* 80px */
+  --space-24: 6rem;
+  /* 96px */
+  --space-28: 7rem;
+  /* 112px */
+  --space-32: 8rem;
+  /* 128px */
+  --space-36: 9rem;
+  /* 144px */
+  --space-40: 10rem;
+  /* 160px */
+  --space-44: 11rem;
+  /* 176px */
+  --space-48: 12rem;
+  /* 192px */
   --lh-3: 1rem;
   /* 16px */
   --lh-4: 1.25rem;
@@ -108,8 +125,6 @@ html {
   --opacity-70: 0.7;
   /* 70% */
   --opacity-60: 0.6;
-  /* 60% */
-  --opacity-80: 0.8;
   /* 60% */
 
 
@@ -310,6 +325,7 @@ body,
   font-family: var(--font-body);
   background-color: var(--white-color);
   color: var(--black-color);
+  position: relative;
 }
 
 
@@ -338,7 +354,6 @@ h4,
 h5,
 h6 {
   font-family: var(--font-heading);
-  color: var(--primary-color);
 }
 
 p,
