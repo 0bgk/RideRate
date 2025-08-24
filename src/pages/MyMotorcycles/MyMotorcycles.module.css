@@ -18,8 +18,8 @@
 }
 
 .motorcycleGrid {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: var(--space-10);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+  width: 100%;
 }
