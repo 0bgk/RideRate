@@ -14,6 +14,7 @@ const MotorcycleDetail = () => {
     lng: moto.coordenadas.longitud,
     id: moto.id,
     name: moto.nombre,
+    model: moto.modelo,
   }))
 
   return (
@@ -47,7 +48,11 @@ const MotorcycleDetail = () => {
           <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
           {positions.map((pos, i) => (
             <Marker key={i} position={[pos.lat, pos.lng]}>
-              <Popup>{pos.name}</Popup>
+              <Popup>
+                <span>Model: {pos.model}</span> 
+                <br/>
+                <span>Name: {pos.name}</span>
+              </Popup>
             </Marker>
           ))}
         </MapContainer>
