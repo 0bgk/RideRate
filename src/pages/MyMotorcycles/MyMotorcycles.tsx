@@ -23,8 +23,8 @@ const MyMotorcycles = () => {
         onSearch={() => setSearch(inputValue)} 
       />
 
-      <section aria-labelledby="my-motorcycles-heading" className={styles.motorcyclesSection}>
-        <h2 id="my-motorcycles-heading" className={styles.heading}>My Motorcycles</h2>
+      <section aria-labelledby="my-motorcycles" className={styles.motorcyclesSection}>
+        <h2 id="my-motorcycles" className={styles.heading}>My Motorcycles</h2>
         <ul className={styles.motorcycleGrid}>
           {filteredMotorcycles.slice(0, visibleCount).map(motorcycle => (
             <MotorcycleCard key={motorcycle.id} {...motorcycle} /> 
