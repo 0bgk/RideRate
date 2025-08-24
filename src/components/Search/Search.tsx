@@ -8,9 +8,10 @@ interface SearchProps {
   setSearch: (value: string) => void
   motorcycles: Motorcycle[]
   onSearch: () => void 
+  disable?: boolean
 }
 
-const Search: React.FC<SearchProps> = ({ search, setSearch, motorcycles, onSearch }) => {
+const Search: React.FC<SearchProps> = ({ search, setSearch, motorcycles, onSearch, disable}) => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault() 
     onSearch()
@@ -28,26 +29,27 @@ const Search: React.FC<SearchProps> = ({ search, setSearch, motorcycles, onSearc
       </div>
 
       <div className={styles.bannerContent}>
-        <form className={styles.searchForm} onSubmit={handleSubmit}>
-          <div className={styles.searchFormTexts}>
-            <label htmlFor="search">Search Motorcycles</label>
-            <p>({motorcycles.length}) Motos</p>
-          </div>
+       {!disable 
+        && <form className={styles.searchForm} onSubmit={handleSubmit}>
+            <div className={styles.searchFormTexts}>
+              <label htmlFor="search">Search Motorcycles</label>
+              <p>({motorcycles.length}) Motos</p>
+            </div>
 
-          <div className={styles.searchFormInputs}>
-            <input
-              id="search"
-              type="text"
-              placeholder="Honda CB500F"
-              value={search}
-              onChange={e => setSearch(e.target.value)}
-              className={styles.searchInput}
-            />
-            <button type="submit" className={styles.searchButton}>
-              Search Inventory
-            </button>
-          </div>
-        </form>
+            <div className={styles.searchFormInputs}>
+              <input
+                id="search"
+                type="text"
+                placeholder="Honda CB500F"
+                value={search}
+                onChange={e => setSearch(e.target.value)}
+                className={styles.searchInput}
+              />
+              <button type="submit" className={styles.searchButton}>
+                Search Inventory
+              </button>
+            </div>
+          </form>}
       </div>
     </section>
   )
