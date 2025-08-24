@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import MotorcycleDetail from '../pages/MotorcycleDetail'
-import MyMotorcycles from '../pages/MyMotorcycles'
+import MyMotorcycles from '../pages/MyMotorcycles/MyMotorcycles'
 import Layout  from '../components/Layout/Layout'
 import NotFound from '../pages/NotFound'
 import { ROUTES } from './routes'
