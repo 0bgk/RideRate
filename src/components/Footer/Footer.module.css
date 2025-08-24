@@ -1,0 +1,14 @@
+.footer {
+  width: var(--w-full);
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: var(--space-8);
+}
+
+.copyright {
+  max-width: var(--body-max-width);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-xs);
+}
