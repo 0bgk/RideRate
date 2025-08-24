@@ -7,11 +7,13 @@ const Header: React.FC = () => {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        <Link to="/" className={styles.logo} aria-label="RideRate Home">
-          RideRate
-        </Link>
+        <div className='logo'>
+          <Link to="/" className={styles.logo} aria-label="RideRate Home">
+            Ride <br/> Rate
+          </Link>
+        </div>
 
-        <nav className={styles.mainNav}>
+        <nav>
           <ul className={styles.navList}>
             <li>
               <Link to={ROUTES.motorcycles} className={styles.navLink}>
