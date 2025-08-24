@@ -6,7 +6,6 @@
 }
 
 .copyright {
-  max-width: var(--body-max-width);
   display: flex;
   align-items: center;
   justify-content: center;
