@@ -1,16 +1,21 @@
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: var(--w-full);
   background-color: var(--primary-color);
   color: #fff;
-  padding: var(--space-5);
+  height: var(--h-20);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .container {
-  max-width: var(--body-max-width);
+  width: var(--body-max-width);
   display: flex;
-  align-items: center;
-  margin: 0 auto;
   gap: var(--space-8);
+  align-items: center;
 }
 
 .logo {
