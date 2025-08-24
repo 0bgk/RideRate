@@ -25,18 +25,27 @@ const MyMotorcycles = () => {
 
       <section aria-labelledby="my-motorcycles" className={styles.motorcyclesSection}>
         <h2 id="my-motorcycles" className={styles.heading}>My Motorcycles</h2>
-        <ul className={styles.motorcycleGrid}>
-          {filteredMotorcycles.slice(0, visibleCount).map(motorcycle => (
-            <MotorcycleCard key={motorcycle.id} {...motorcycle} /> 
-          ))}
-        </ul>
 
-        {visibleCount < filteredMotorcycles.length && (
-          <div className={styles.showMoreContainer}>
-            <button className={styles.showMoreButton} onClick={showMore}>
-              Show More
-            </button>
-          </div>
+        {filteredMotorcycles.length === 0 ? (
+          <p className={styles.noData}>
+            No motorcycles found. Try adjusting your search.
+          </p>
+          ) : (
+          <>
+            <ul className={styles.motorcycleGrid}>
+              {filteredMotorcycles.slice(0, visibleCount).map(motorcycle => (
+                <MotorcycleCard key={motorcycle.id} {...motorcycle} /> 
+              ))}
+            </ul>
+
+            {visibleCount < filteredMotorcycles.length && (
+              <div className={styles.showMoreContainer}>
+                <button className={styles.button} onClick={showMore}>
+                  Show More
+                </button>
+              </div>
+            )}
+          </>
         )}
       </section>
     </div>

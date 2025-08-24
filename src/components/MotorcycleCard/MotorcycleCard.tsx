@@ -35,6 +35,7 @@ const MotorcycleCard = ({ id, modelo, nombre, precioCompra }: Motorcycle) => {
         src={defaultImage}
         alt={`${modelo} ${nombre}`}
         className={styles.image}
+        loading="lazy"
       />
       <div className={styles.infoContainer}>
         <div className={styles.details}>

@@ -17,7 +17,7 @@
   width: var(--w-full);
   justify-content: space-between;
   align-items: top;
-  padding: 0 var(--space-4);
+  padding-left: var(--space-4);
   position: relative;
 }
 
@@ -89,7 +89,7 @@
   right: 0;
   bottom: 0;
   position: absolute;
-  padding: var(--space-2) var(--space-4);
+  padding: var(--space-3) var(--space-6);
   background-color: var(--primary-color);
   color: #fff;
   border: none;

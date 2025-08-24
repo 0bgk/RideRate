@@ -24,6 +24,7 @@ const MotorcycleCardDetail = ({ modelo, nombre, precioCompra }: Motorcycle) => {
           src={defaultImage}
           alt={`Motorcycle ${modelo} ${nombre}`}
           className={styles.image}
+          loading="lazy"
         />
         <figcaption className={styles.imageCaption}>
           {modelo} {nombre}

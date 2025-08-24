@@ -33,14 +33,18 @@
   justify-content: center;
 }
 
-.showMoreButton {
-  padding: var(--space-2) var(--space-4);
+.button {
+  padding: var(--space-3) var(--space-6);
   background-color: var(--secondary-color);
   color: #fff;
   border: none;
   cursor: pointer;
 }
 
-.showMoreButton:hover {
+.button:hover {
   background-color: var(--secondary-color-hover);
+}
+
+.noData {
+  color: var(--black-color);
 }

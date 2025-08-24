@@ -8,7 +8,7 @@ import 'leaflet/dist/leaflet.css'
 
 const MotorcycleDetail = () => {
   const { motorcycles, inputValue, setInputValue, setSearch } = useMotorcycles()
-  const { selectedMotorcycle, loading } = useMotorcycleDetail()
+  const { selectedMotorcycle } = useMotorcycleDetail()
   const positions = motorcycles.map((moto) => ({
     lat: moto.coordenadas.latitud,
     lng: moto.coordenadas.longitud,
@@ -29,12 +29,10 @@ const MotorcycleDetail = () => {
       <section aria-labelledby="motorcycle-detail" className={styles.motorcyclesSection}>
         <h2 id="motorcycle-detail" className={styles.heading}>Motorcycle Detail</h2>
         <div className={styles.cardDetailContainer}>
-          {loading ? (
-            <p>Loading...</p>
-          ) : selectedMotorcycle ? (
+          {selectedMotorcycle ? (
             <MotorcycleCardDetail {...selectedMotorcycle} />
           ) : (
-            <p>No motorcycle found.</p>
+            <p className={styles.notFound}>No motorcycle found.</p>
           )}
         </div>
       </section>
