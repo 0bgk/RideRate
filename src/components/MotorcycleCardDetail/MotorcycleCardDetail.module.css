@@ -1,0 +1,112 @@
+.card {
+  display: flex;
+  width: 100%;
+  gap: var(--space-5)
+}
+
+.image {
+  width: var(--w-96);
+  height: var(--h-full);
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.infoContainer {
+  display: flex;
+  width: var(--w-full);
+  justify-content: space-between;
+  align-items: top;
+  padding: 0 var(--space-4);
+  position: relative;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.titles {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.model {
+  color: var(--secondary-color);
+  font-family: var(--font-heading);
+  font-size: var(--text-md);
+  font-weight: var(--font-semibold);
+  text-transform: uppercase;
+}
+
+.brand {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: var(--font-semibold);
+  text-transform: uppercase;
+  color: var(--black-color);
+}
+
+.info {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--black-color);
+  max-width: var(--w-96);
+}
+
+.priceContainer {
+  display: flex;
+  justify-content: flex-end;
+  height: fit-content;
+}
+
+.priceBox {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  background-color: var(--secondary-color);
+  padding: var(--space-3) var(--space-6) var(--space-3) var(--space-32);
+  min-width: 130px;
+  clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.price {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  margin-left: var(--space-2);
+  font-size: var(--text-xl);
+  font-weight: var(--font-semibold);
+  color: var(--white-color);
+}
+
+.desc {
+  width: var(--w-full);
+  display: flex;
+}
+
+.button {
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  padding: var(--space-2) var(--space-4);
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--primary-color-hover);
+}
+
+.titleConfirmation {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: var(--font-semibold);
+  margin-bottom: var(--space-4);
+}
+
+.messageConfirmation {
+  max-width: var(--w-96);
+}
