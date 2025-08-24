@@ -1,15 +1,21 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import MotorcycleDetail from '../pages/MotorcycleDetail'
 import MyMotorcycles from '../pages/MyMotorcycles'
+import Layout  from '../components/Layout/Layout'
 import NotFound from '../pages/NotFound'
+import { ROUTES } from './routes'
 
-const AppRoutes = () => {
+ const AppRoutes= () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<MyMotorcycles />} />
-        <Route path="/motorcycle/:id" element={<MotorcycleDetail />} />
-        <Route path="*" element={<NotFound />} />
+        <Route element={<Layout />}>
+          <Route index element={<MyMotorcycles />} />
+          <Route path={ROUTES.motorcycles} element={<MyMotorcycles />} />
+          <Route path={ROUTES.motorcycleDetail} element={<MotorcycleDetail />} />
+          <Route path="/" element={<Navigate to={ROUTES.motorcycles} />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   )
