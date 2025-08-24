@@ -16,6 +16,7 @@ html {
   --primary-color: #21402E;
   /* dark green */
   --secondary-color: #A64C38;
+  --secondary-color-hover: #8c3b2e;
   /* warm brown */
   --black-color: #000000;
   --white-color: #FFFFFF;
@@ -23,7 +24,6 @@ html {
   --font-body: 'Open Sans', sans-serif;
 
   --body-max-width: 1200px;
-
 
   --text-xs: 0.75rem;
   /* 12px */
@@ -74,6 +74,14 @@ html {
   /* 36px */
   --space-10: 2.5rem;
   /* 40px */
+  --space-11: 2.75rem;
+  /* 44px */
+  --space-12: 3rem;
+  /* 48px */
+  --space-14: 3.5rem;
+  /* 56px */
+  --space-16: 4rem;
+  /* 64px */
 
   --lh-3: 1rem;
   /* 16px */
@@ -100,6 +108,8 @@ html {
   --opacity-70: 0.7;
   /* 70% */
   --opacity-60: 0.6;
+  /* 60% */
+  --opacity-80: 0.8;
   /* 60% */
 
 
