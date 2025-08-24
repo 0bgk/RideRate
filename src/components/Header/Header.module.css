@@ -42,3 +42,25 @@
 .navLink:hover {
   opacity: var(--opacity-60);
 }
+
+@media (max-width: 1024px) {
+  .container {
+    align-items: center;
+    padding-left: var(--container-padding-x);
+    padding-right: var(--container-padding-x);
+  }
+
+  .navList {
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .logo {
+    text-align: center;
+    font-size: var(--text-lg);
+  }
+
+  .navLink {
+    font-size: var(--text-base);
+  }
+}
