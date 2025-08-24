@@ -23,3 +23,22 @@
   gap: var(--space-4);
   width: 100%;
 }
+
+.showMoreContainer {
+  margin-top: var(--space-14);
+  width: var(--w-full);
+  display: flex;
+  justify-content: center;
+}
+
+.showMoreButton {
+  padding: var(--space-2) var(--space-4);
+  background-color: var(--secondary-color);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.showMoreButton:hover {
+  background-color: var(--secondary-color-hover);
+}

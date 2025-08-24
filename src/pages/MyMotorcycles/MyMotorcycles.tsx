@@ -33,7 +33,7 @@ const MyMotorcycles = () => {
 
         {visibleCount < filteredMotorcycles.length && (
           <div className={styles.showMoreContainer}>
-            <button className={styles.showMoreBtn} onClick={showMore}>
+            <button className={styles.showMoreButton} onClick={showMore}>
               Show More
             </button>
           </div>
