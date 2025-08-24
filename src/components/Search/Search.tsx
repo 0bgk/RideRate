@@ -1,3 +1,4 @@
+import type { Motorcycle } from '../MotorcycleCard/MotorcycleCard'
 import bannerImage from '../../assets/images/banner.jpg'
 import styles from './Search.module.css'
 import React from 'react'
@@ -5,11 +6,16 @@ import React from 'react'
 interface SearchProps {
   search: string
   setSearch: (value: string) => void
-  handleSearch: () => void
-  motorcycles: unknown[]
+  motorcycles: Motorcycle[]
+  onSearch: () => void 
 }
 
-const Search: React.FC<SearchProps> = ({ search, setSearch, handleSearch, motorcycles }) => {
+const Search: React.FC<SearchProps> = ({ search, setSearch, motorcycles, onSearch }) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault() 
+    onSearch()
+  }
+
   return (
     <section className={styles.banner} aria-labelledby="search-motorcycles">
       <div className={styles.imageContainer}>
@@ -22,15 +28,13 @@ const Search: React.FC<SearchProps> = ({ search, setSearch, handleSearch, motorc
       </div>
 
       <div className={styles.bannerContent}>
-        <div className={styles.searchForm}>
+        <form className={styles.searchForm} onSubmit={handleSubmit}>
           <div className={styles.searchFormTexts}>
-            <label htmlFor="search">
-              Search Motorcycles
-            </label>
+            <label htmlFor="search">Search Motorcycles</label>
             <p>({motorcycles.length}) Motos</p>
           </div>
 
-          <div className={styles.searchFormInputs}> 
+          <div className={styles.searchFormInputs}>
             <input
               id="search"
               type="text"
@@ -39,11 +43,11 @@ const Search: React.FC<SearchProps> = ({ search, setSearch, handleSearch, motorc
               onChange={e => setSearch(e.target.value)}
               className={styles.searchInput}
             />
-            <button onClick={handleSearch} className={styles.searchButton}>
+            <button type="submit" className={styles.searchButton}>
               Search Inventory
             </button>
           </div>
-        </div>
+        </form>
       </div>
     </section>
   )

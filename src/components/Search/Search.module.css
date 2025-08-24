@@ -1,11 +1,7 @@
 .banner {
-  width: var(--body-max-width);
   position: relative;
   width: var(--w-full);
-  max-width: var(--w-full);
   height: var(--h-64);
-  margin: 0 auto;
-  overflow: hidden;
 }
 
 .imageContainer {
