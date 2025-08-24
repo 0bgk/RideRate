@@ -30,12 +30,12 @@
   line-height: 1.2;
 }
 
-.modelo {
+.model {
   font-family: var(--font-heading);
   font-size: var(--text-md, 1rem);
   font-weight: var(--font-semibold);
   text-transform: uppercase;
-  color: var(--text-primary, #000);
+  color: var(--black-color);
 }
 
 .brand {
@@ -43,20 +43,29 @@
   font-size: var(--text-lg);
   font-weight: var(--font-semibold);
   text-transform: uppercase;
-  color: var(--text-primary, #000);
+  color: var(--black-color);
+}
+
+.brand {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: var(--font-semibold);
+  text-transform: uppercase;
+  color: var(--black-color);
 }
 
 .priceContainer {
   display: flex;
   justify-content: flex-end;
+  height: fit-content;
 }
 
 .priceBox {
   position: relative;
   display: flex;
   justify-content: flex-end;
-  background-color: var(--secondary-color, #A64C38);
-  padding: var(--space-3, 0.75rem) var(--space-6, 1.5rem);
+  background-color: var(--secondary-color);
+  padding: var(--space-3) var(--space-6);
   min-width: 130px;
   clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
 }
@@ -66,5 +75,5 @@
   margin-left: var(--space-5, 1.25rem);
   font-size: var(--text-xl, 1.5rem);
   font-weight: var(--font-semibold);
-  color: var(--text-on-secondary, #fff);
+  color: var(--white-color);
 }
