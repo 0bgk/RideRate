@@ -43,7 +43,7 @@ const MotorcycleDetail = () => {
         <MapContainer
           center={[41.75, 2.40]}
           zoom={8}
-          style={{ height: '600px', width: '100%' }}
+          style={{ height: '550px', width: '100%' }}
         >
           <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
           {positions.map((pos, i) => (
