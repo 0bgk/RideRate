@@ -32,21 +32,13 @@
 
 .model {
   font-family: var(--font-heading);
-  font-size: var(--text-md, 1rem);
+  font-size: var(--text-base);
   font-weight: var(--font-semibold);
   text-transform: uppercase;
   color: var(--black-color);
 }
 
-.brand {
-  font-family: var(--font-heading);
-  font-size: var(--text-lg);
-  font-weight: var(--font-semibold);
-  text-transform: uppercase;
-  color: var(--black-color);
-}
-
-.brand {
+.name {
   font-family: var(--font-heading);
   font-size: var(--text-lg);
   font-weight: var(--font-semibold);
@@ -83,7 +75,7 @@
     font-size: var(--text-sm);
   }
 
-  .brand {
+  .name {
     font-size: var(--text-base);
   }
 

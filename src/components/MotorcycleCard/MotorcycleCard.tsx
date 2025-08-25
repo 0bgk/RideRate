@@ -39,8 +39,8 @@ const MotorcycleCard = ({ id, modelo, nombre, precioCompra }: Motorcycle) => {
       />
       <div className={styles.infoContainer}>
         <div className={styles.details}>
-          <span className={styles.modelo}>{modelo}</span>
-          <span className={styles.brand}>{nombre}</span>
+          <span className={styles.model}>{modelo}</span>
+          <span className={styles.name}>{nombre}</span>
         </div>
         <div className={styles.priceContainer}>
           <div className={styles.priceBox}>
