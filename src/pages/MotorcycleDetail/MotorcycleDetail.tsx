@@ -4,9 +4,12 @@ import { useMotorcycleDetail } from '../../hooks/useMotorcycleDetail'
 import { useMotorcycles } from '../../hooks/useMotorcycles'
 import Search from '../../components/Search/Search'
 import styles from './MotorcycleDetail.module.css'
+import { useNavigate } from 'react-router-dom'
+import { ROUTES } from '../../routes/routes'
 import 'leaflet/dist/leaflet.css'
 
 const MotorcycleDetail = () => {
+  const navigate = useNavigate()
   const { motorcycles, inputValue, setInputValue, setSearch } = useMotorcycles()
   const { selectedMotorcycle } = useMotorcycleDetail()
   const positions = motorcycles.map(({ id, nombre, modelo, coordenadas }) => ({
@@ -28,7 +31,17 @@ const MotorcycleDetail = () => {
       />
 
       <section aria-labelledby="motorcycle-detail" className={styles.motorcyclesSection}>
-        <h2 id="motorcycle-detail" className={styles.heading}>Motorcycle Detail</h2>
+        <div className={styles.heading}>
+          <h2 id="motorcycle-detail" className={styles.headingTitle}>Motorcycle Detail</h2>
+          <button
+            className={styles.button}
+            onClick={() => navigate(ROUTES.home)}
+            aria-label="Go back"
+            title="Go back"
+          >
+            Go back
+          </button>
+        </div>
         <div className={styles.cardDetailContainer}>
           {selectedMotorcycle ? (
             <MotorcycleCardDetail {...selectedMotorcycle} />
