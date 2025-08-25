@@ -110,3 +110,73 @@
 .messageConfirmation {
   max-width: var(--w-96);
 }
+
+@media (max-width: 1024px) {
+  .card {
+    flex-direction: column;
+    gap: var(--space-1);
+  }
+
+  .image {
+    width: 100%;
+    height: var(--h-64);
+    max-height: none;
+  }
+
+  .infoContainer {
+    flex-direction: column;
+    gap: var(--space-3);
+    padding-left: 0;
+    width: 100%;
+  }
+
+  .details {
+    width: 100%;
+    gap: var(--space-1);
+  }
+
+  .priceContainer {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .priceBox {
+    width: 100%;
+    clip-path: none;
+    justify-content: center;
+    text-align: center;
+    padding: var(--space-3) var(--space-4);
+  }
+
+  .price {
+    font-size: var(--text-base);
+  }
+
+  .button {
+    position: relative;
+    width: 100%;
+  }
+
+  .model {
+    font-size: var(--text-base);
+    color: var(--secondary-color);
+    text-align: left;
+  }
+
+  .brand {
+    font-size: var(--text-base);
+    color: var(--black-color);
+    text-align: left;
+  }
+
+  .info {
+    font-size: var(--text-sm);
+    color: var(--black-color);
+    text-align: left;
+    max-width: 100%;
+  }
+
+  .price {
+    font-size: var(--text-lg);
+  }
+}
