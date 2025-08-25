@@ -13,6 +13,8 @@ html {
 }
 
 :root {
+  --container-padding-x: var(--space-6);
+
   --primary-color: #21402E;
   --primary-color-hover: #162b1f;
   /* dark green */
