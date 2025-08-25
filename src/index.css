@@ -320,6 +320,15 @@ html {
   --font-black: 900;
 }
 
+#root {
+  font-optical-sizing: auto;
+  min-height: var(--h-screen);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
 html,
 body,
 #root {
