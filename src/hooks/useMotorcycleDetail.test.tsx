@@ -15,7 +15,7 @@ describe('useMotorcycleDetail', () => {
     modelo: 'CB500F',
     nombre: 'Honda',
     precioCompra: 5000,
-    fechaCompra: new Date(),
+    fechaCompra: new Date().toDateString(),
     coordenadas: { latitud: 41.39, longitud: 2.16 },
   }
 

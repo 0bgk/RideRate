@@ -37,7 +37,7 @@ vi.mock('react-router-dom', async (importOriginal) => {
 
 const mockMotorcycle: Motorcycle = {
   id: '1',
-  fechaCompra: new Date(),
+  fechaCompra: new Date().toDateString(),
   precioCompra: 12000,
   modelo: 'Model X',
   nombre: 'Brand Y',

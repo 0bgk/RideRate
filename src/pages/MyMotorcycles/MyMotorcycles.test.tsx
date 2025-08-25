@@ -50,7 +50,7 @@ describe('MyMotorcycles', () => {
       modelo: 'X',
       nombre: 'Y',
       precioCompra: 1000,
-      fechaCompra: new Date(),
+      fechaCompra: new Date().toDateString(),
       coordenadas: { latitud: 0, longitud: 0 },
     }
     const mockMotorcycles = [mockMotorcycleData, { ...mockMotorcycleData, id: '2' }]

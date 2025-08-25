@@ -6,8 +6,8 @@ import type { Motorcycle } from '../components/MotorcycleCard/MotorcycleCard'
 
 describe('useMotorcycles', () => {
   const mockMotorcycles: Motorcycle[] = [
-    { id: '1', modelo: 'CB500F', nombre: 'Honda', precioCompra: 5000, fechaCompra: new Date(), coordenadas: { latitud: 41.39, longitud: 2.16 } },
-    { id: '2', modelo: 'MT-07', nombre: 'Yamaha', precioCompra: 7000, fechaCompra: new Date(), coordenadas: { latitud: 40.41, longitud: 2.18 } },
+    { id: '1', modelo: 'CB500F', nombre: 'Honda', precioCompra: 5000, fechaCompra: new Date().toDateString(), coordenadas: { latitud: 41.39, longitud: 2.16 } },
+    { id: '2', modelo: 'MT-07', nombre: 'Yamaha', precioCompra: 7000, fechaCompra: new Date().toDateString(), coordenadas: { latitud: 40.41, longitud: 2.18 } },
   ]
 
   beforeEach(() => {

@@ -24,8 +24,8 @@ vi.mock('../../assets/images/banner.jpg', () => ({
 }))
 
 const mockMotorcycles: Motorcycle[] = [
-  { id: '1', fechaCompra: new Date(), precioCompra: 1000, modelo: 'X', nombre: 'Y', coordenadas: { latitud: 0, longitud: 0 } },
-  { id: '2', fechaCompra: new Date(), precioCompra: 2000, modelo: 'A', nombre: 'B', coordenadas: { latitud: 0, longitud: 0 } },
+  { id: '1', fechaCompra: new Date().toDateString(), precioCompra: 1000, modelo: 'X', nombre: 'Y', coordenadas: { latitud: 0, longitud: 0 } },
+  { id: '2', fechaCompra: new Date().toDateString(), precioCompra: 2000, modelo: 'A', nombre: 'B', coordenadas: { latitud: 0, longitud: 0 } },
 ]
 
 describe('Search', () => {
