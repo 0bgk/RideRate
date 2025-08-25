@@ -1,0 +1,86 @@
+.card {
+  list-style: none;
+  width: 100%;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-0.05rem);
+}
+
+.image {
+  width: var(--w-full);
+  height: var(--h-64);
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.infoContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-4) 0;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.model {
+  font-family: var(--font-heading);
+  font-size: var(--text-base);
+  font-weight: var(--font-semibold);
+  text-transform: uppercase;
+  color: var(--black-color);
+}
+
+.name {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: var(--font-semibold);
+  text-transform: uppercase;
+  color: var(--black-color);
+}
+
+.priceContainer {
+  display: flex;
+  justify-content: flex-end;
+  height: fit-content;
+}
+
+.priceBox {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  background-color: var(--secondary-color);
+  padding: var(--space-3) var(--space-6);
+  min-width: 130px;
+  clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.price {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  margin-left: var(--space-5, 1.25rem);
+  font-size: var(--text-xl, 1.5rem);
+  font-weight: var(--font-semibold);
+  color: var(--white-color);
+}
+
+@media (max-width: 1024px) {
+  .model {
+    font-size: var(--text-sm);
+  }
+
+  .name {
+    font-size: var(--text-base);
+  }
+
+  .price {
+    margin-left: 0;
+    font-size: var(--text-lg);
+  }
+}
