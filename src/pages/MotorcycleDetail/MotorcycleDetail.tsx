@@ -54,7 +54,7 @@ const MotorcycleDetail = () => {
       <section aria-labelledby="location-of-my-motorcycles" className={styles.motorcyclesSection}>
         <h2 id="location-of-my-motorcycles" className={styles.heading}>Location of my motorcycles</h2>
         <MapContainer
-          center={[41.75, 2.40]}
+          center={[41.75, 2.40] as [number, number]}
           zoom={8}
           style={{ height: '550px', width: '100%' }}
         >

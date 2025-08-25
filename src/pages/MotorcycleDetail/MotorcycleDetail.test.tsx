@@ -5,10 +5,8 @@ import { ROUTES } from '../../routes/routes'
 
 // Mock react-router-dom navigate
 const mockNavigate = vi.fn()
-vi.mock('react-router-dom', async (importOriginal) => {
-  const current = await importOriginal()
+vi.mock('react-router-dom', async () => {
   return {
-    ...current,
     useNavigate: () => mockNavigate,
   }
 })
