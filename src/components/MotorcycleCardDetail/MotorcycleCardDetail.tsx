@@ -3,15 +3,17 @@ import defaultImage from '../../assets/images/moto.jpg'
 import styles from './MotorcycleCardDetail.module.css'
 import { useState, useEffect, useRef } from 'react'
 import Modal from '../Modal/Modal'
+import { useBuyback } from '../../hooks/useBuyback'
 
-const MotorcycleCardDetail = ({ modelo, nombre, precioCompra }: Motorcycle) => {
+const MotorcycleCardDetail = ({ modelo, nombre, precioCompra, fechaCompra }: Motorcycle) => {
   const [isOpen, setIsOpen] = useState(false)
+  const { buybackValue } = useBuyback(precioCompra, fechaCompra)
   const closeBtnRef = useRef<HTMLButtonElement>(null)
 
   const formattedPrice = new Intl.NumberFormat('es-ES', {
     style: 'currency',
     currency: 'EUR'
-  }).format(precioCompra)
+  }).format(buybackValue)
 
   useEffect(() => {
     if (isOpen) closeBtnRef.current?.focus()

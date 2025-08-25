@@ -2,10 +2,11 @@ import defaultImage from '../../assets/images/moto.jpg'
 import styles from './MotorcycleCard.module.css'
 import { useNavigate } from 'react-router-dom'
 import { ROUTES } from '../../routes/routes'
+import { useBuyback } from '../../hooks/useBuyback'
 
 export interface Motorcycle {
   id: string
-  fechaCompra: Date
+  fechaCompra: string
   precioCompra: number
   modelo: string
   nombre: string
@@ -15,7 +16,8 @@ export interface Motorcycle {
   }
 }
 
-const MotorcycleCard = ({ id, modelo, nombre, precioCompra }: Motorcycle) => {
+const MotorcycleCard = ({ id, modelo, nombre, precioCompra, fechaCompra }: Motorcycle) => {
+  const { buybackValue } = useBuyback(precioCompra, fechaCompra)
   const navigate = useNavigate()
 
   const handleCardClick = () => navigate(ROUTES.motorcycleDetail.replace(':id', id))
@@ -23,7 +25,8 @@ const MotorcycleCard = ({ id, modelo, nombre, precioCompra }: Motorcycle) => {
   const formattedPrice = new Intl.NumberFormat('es-ES', {
     style: 'currency',
     currency: 'EUR'
-  }).format(precioCompra)
+  }).format(buybackValue)
+
 
   return (
     <li
