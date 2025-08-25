@@ -1,69 +1,74 @@
-# React + TypeScript + Vite
+# RideRate
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+RideRate is a web application that allows users to manage and explore motorcycles. Users can view motorcycle details, search through their inventory, and see the location of each motorcycle on a map. The app also calculates the buyback value of each motorcycle based on the purchase date and price.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- List and search motorcycles
+- View detailed information for each motorcycle
+- Buyback value calculation based on purchase date
+- Map view showing the location of motorcycles
+- Responsive design for different devices
 
-## Expanding the ESLint configuration
+## Technologies
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React + TypeScript
+- React Router
+- React Leaflet for maps
+- Vite as build tool
+- CSS Modules for styling
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Installation
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+Clone the repository:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone https://github.com/your-username/riderate.git
+cd riderate
+````
+
+Install dependencies:
+
+```bash
+yarn install
+# or
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Running the App
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Start the development server:
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+yarn dev
+# or
+npm run dev
 ```
+
+Build the app for production:
+
+```bash
+yarn build
+# or
+npm run build
+```
+
+Run tests:
+
+```bash
+yarn test
+# or
+npm run test
+```
+
+## Folder Structure
+
+* `src/components` – Reusable components such as MotorcycleCard, Search, Modal
+* `src/hooks` – Custom hooks for managing state and fetching data
+* `src/pages` – Page components like MyMotorcycles and MotorcycleDetail
+* `src/assets` – Images and static assets
+* `src/routes` – App routes
+
+## Deployment
+
+The project can be deployed easily on Vercel or any other static hosting platform.
