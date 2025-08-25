@@ -9,12 +9,12 @@ import 'leaflet/dist/leaflet.css'
 const MotorcycleDetail = () => {
   const { motorcycles, inputValue, setInputValue, setSearch } = useMotorcycles()
   const { selectedMotorcycle } = useMotorcycleDetail()
-  const positions = motorcycles.map((moto) => ({
-    lat: moto.coordenadas.latitud,
-    lng: moto.coordenadas.longitud,
-    id: moto.id,
-    name: moto.nombre,
-    model: moto.modelo,
+  const positions = motorcycles.map(({ id, nombre, modelo, coordenadas }) => ({
+    id,
+    lat: coordenadas.latitud,
+    lng: coordenadas.longitud,
+    name: nombre,
+    model: modelo,
   }))
 
   return (
