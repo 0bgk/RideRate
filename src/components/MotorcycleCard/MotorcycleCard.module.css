@@ -77,3 +77,18 @@
   font-weight: var(--font-semibold);
   color: var(--white-color);
 }
+
+@media (max-width: 1024px) {
+  .model {
+    font-size: var(--text-sm);
+  }
+
+  .brand {
+    font-size: var(--text-base);
+  }
+
+  .price {
+    margin-left: 0;
+    font-size: var(--text-lg);
+  }
+}
